@@ -1,15 +1,40 @@
-package banco;
-
+package banco.java;
 import java.math.BigDecimal;
 
 public abstract class Conta {
 
 
-    public int agencia;
-    public int numero;
-    public Cliente titular;
+    private int agencia;
+    private int numero;
+    private Cliente titular;
     public static int total = 0;
     private BigDecimal saldo;
+    
+    public int getAgencia() {
+        return this.agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public int getNumero() {
+        return this.numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public Cliente getTitular() {
+        return this.titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+    
+    
     public Conta(int agencia, int numero){
         Conta.total++;
         System.out.println("O total de contas é " + Conta.total);

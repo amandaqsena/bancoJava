@@ -1,4 +1,4 @@
-package banco;
+package banco.java;
 
 public abstract class Pessoa {
     private String nome;

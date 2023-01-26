@@ -1,4 +1,4 @@
-package banco;
+package banco.java;
 
 import java.util.List;
 
