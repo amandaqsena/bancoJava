@@ -8,7 +8,7 @@ public abstract class Conta {
     private int numero;
     private Cliente titular;
     public static int total = 0;
-    private BigDecimal saldo;
+    protected BigDecimal saldo;
     
     public int getAgencia() {
         return this.agencia;

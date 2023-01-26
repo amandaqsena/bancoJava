@@ -7,8 +7,9 @@ public class ContaCorrente extends Conta implements Tributavel{
         super(agencia, numero);
     }
 
+    @Override
     public BigDecimal getValorImposto(){
         BigDecimal taxa = new BigDecimal("0.01");
-        return super.getSaldo().multiply(taxa);
+        return super.saldo.multiply(taxa);
     }
 }

@@ -18,8 +18,9 @@ public class App {
 
         CalculadorDeImposto calc = new CalculadorDeImposto();
         calc.registra(cc);
-        //calc.registra(seguro);
-        //System.out.println(calc.getTotalImposto);
+        System.out.println(calc.getTotalImposto());
+        calc.registra(seguro);
+        System.out.println(calc.getTotalImposto());
 
     }
     
