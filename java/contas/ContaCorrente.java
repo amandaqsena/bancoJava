@@ -1,5 +1,5 @@
-package banco.java;
-
+package banco.java.contas;
+import banco.java.*;
 import java.math.BigDecimal;
 
 public class ContaCorrente extends Conta implements Tributavel{

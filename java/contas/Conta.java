@@ -1,4 +1,6 @@
-package banco.java;
+package banco.java.contas;
+
+import banco.java.*;
 import java.math.BigDecimal;
 
 public abstract class Conta {
@@ -41,7 +43,7 @@ public abstract class Conta {
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = BigDecimal.ZERO;
-        System.out.println("Estou criando uma conta " + this.numero);
+        System.out.println("Estou criando a conta " + this.numero);
         
     }
 
@@ -49,31 +51,29 @@ public abstract class Conta {
         return this.saldo;
     }
 
-    public boolean sacar(BigDecimal valor) {
-        if(saldo.compareTo(valor) >=0 || (BigDecimal.ZERO.compareTo(valor) <= 0)){
-            this.saldo = saldo.subtract(valor);
-            return true;
-        } else {
-            return false;
+
+    public void sacar(BigDecimal valor) {
+        if((BigDecimal.ZERO.compareTo(valor) >= 0)){
+            throw new IllegalArgumentException("Montante deve ser positivo");
         }
+
+        if(saldo.compareTo(valor) <= 0){
+            throw new IllegalArgumentException("Montante deve menor que o saldo");
+        }
+        this.saldo = saldo.subtract(valor);
+        
     }
 
-    public boolean depositar(BigDecimal valor) {
-        if((BigDecimal.ZERO.compareTo(valor) <= 0)){
-            this.saldo = saldo.add(valor);
-            return true;
-        } else {
-            return false;
+    public void depositar(BigDecimal valor) {
+        if((BigDecimal.ZERO.compareTo(valor) >= 0)){
+            throw new IllegalArgumentException("Montante deve ser positivo");
         }
+        this.saldo = saldo.add(valor);
     }
 
-    public boolean transfere(Conta contaDestino, BigDecimal valor) {
-        if (this.sacar(valor)) {
-            contaDestino.depositar(valor);
-            return true;
-        } else {
-            return false;
-        }
+    public void transferir(Conta contaDestino, BigDecimal valor) {
+        this.sacar(valor);
+        contaDestino.depositar(valor);
     }
 
 }
