@@ -1,6 +1,9 @@
 package banco.java.app;
-import banco.java.contas.*;
-import banco.java.*;
+import banco.java.contas.ContaCorrente;
+import banco.java.contas.ContaPoupanca;
+import banco.java.SeguroDeVida;
+import banco.java.CalculadorDeImposto;
+
 import java.math.BigDecimal;
 
 public class App {

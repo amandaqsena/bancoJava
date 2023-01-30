@@ -52,7 +52,7 @@ public abstract class Conta {
     }
 
 
-    public void sacar(BigDecimal valor) {
+    public BigDecimal removerSaldo(BigDecimal valor) {
         if((BigDecimal.ZERO.compareTo(valor) >= 0)){
             throw new IllegalArgumentException("Montante deve ser positivo");
         }
@@ -61,19 +61,15 @@ public abstract class Conta {
             throw new IllegalArgumentException("Montante deve menor que o saldo");
         }
         this.saldo = saldo.subtract(valor);
+        return this.saldo;
         
     }
 
-    public void depositar(BigDecimal valor) {
+    public BigDecimal adicionarSaldo(BigDecimal valor) {
         if((BigDecimal.ZERO.compareTo(valor) >= 0)){
             throw new IllegalArgumentException("Montante deve ser positivo");
         }
         this.saldo = saldo.add(valor);
+        return this.saldo;
     }
-
-    public void transferir(Conta contaDestino, BigDecimal valor) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
-    }
-
 }

@@ -1,10 +1,27 @@
 package banco.java.contas;
+
 import banco.java.*;
 import java.math.BigDecimal;
 
-public class ContaCorrente extends Conta implements Tributavel{
+
+public class ContaCorrente extends Conta implements Tributavel, ContaSacavel {
     public ContaCorrente(int agencia, int numero){
         super(agencia, numero);
+    }
+
+    public BigDecimal depositar(BigDecimal valor){
+        adicionarSaldo(valor);
+        return this.getSaldo();
+    }
+
+    public BigDecimal sacar(BigDecimal valor){
+        removerSaldo(valor);
+        return this.getSaldo();
+    }
+
+    public void transferir(Conta contaDestino, BigDecimal valor) {
+        this.sacar(valor);
+        contaDestino.adicionarSaldo(valor);
     }
 
     @Override
