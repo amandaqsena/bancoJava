@@ -1,10 +1,10 @@
-package banco.java.app;
-import banco.java.contas.ContaCorrente;
-import banco.java.contas.ContaPoupanca;
-import banco.java.SeguroDeVida;
-import banco.java.CalculadorDeImposto;
-
+package app;
 import java.math.BigDecimal;
+
+import modelo.CalculadorDeImposto;
+import modelo.SeguroDeVida;
+import modelo.contas.ContaCorrente;
+import modelo.contas.ContaPoupanca;
 
 public class App {
 

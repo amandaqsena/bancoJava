@@ -1,4 +1,4 @@
-package banco.java.contas;
+package modelo.contas;
 import java.math.BigDecimal;
 
 public interface ContaDepositavel {

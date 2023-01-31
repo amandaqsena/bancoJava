@@ -1,7 +1,8 @@
-package banco.java.contas;
+package modelo.contas;
 
-import banco.java.*;
 import java.math.BigDecimal;
+
+import modelo.Tributavel;
 
 
 public class ContaCorrente extends Conta implements Tributavel, ContaSacavel {

@@ -1,7 +1,8 @@
-package banco.java;
+package modelo;
 
-import banco.java.contas.*;
 import java.util.List;
+
+import modelo.contas.*;
 
 public class Cliente extends Pessoa{
 

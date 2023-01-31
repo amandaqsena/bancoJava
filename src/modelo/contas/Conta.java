@@ -1,7 +1,8 @@
-package banco.java.contas;
+package modelo.contas;
 
-import banco.java.*;
 import java.math.BigDecimal;
+
+import modelo.Cliente;
 
 public abstract class Conta {
 

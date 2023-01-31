@@ -1,4 +1,4 @@
-package banco.java;
+package modelo;
 
 import java.math.BigDecimal;
 
