@@ -38,6 +38,13 @@ public abstract class Conta {
     
     
     public Conta(int agencia, int numero){
+        if(agencia < 1) {
+            throw new IllegalArgumentException("Agencia inválida");
+        }
+
+        if(numero < 1) {
+            throw new IllegalArgumentException("Numero da conta inválido");
+        }
         Conta.total++;
         System.out.println("O total de contas é " + Conta.total);
         this.agencia = agencia;
@@ -58,7 +65,7 @@ public abstract class Conta {
         }
 
         if(saldo.compareTo(valor) <= 0){
-            throw new IllegalArgumentException("Montante deve menor que o saldo");
+            throw new IllegalArgumentException("Saldo: " + this.saldo + ", Valor " + valor);
         }
         this.saldo = saldo.subtract(valor);
         return this.saldo;
