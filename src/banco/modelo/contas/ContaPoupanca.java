@@ -1,4 +1,4 @@
-package modelo.contas;
+package banco.modelo.contas;
 
 import java.util.HashMap;
 import java.util.Map;

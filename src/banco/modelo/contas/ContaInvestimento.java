@@ -1,4 +1,4 @@
-package modelo.contas;
+package banco.modelo.contas;
 
 public class ContaInvestimento extends Conta{
 

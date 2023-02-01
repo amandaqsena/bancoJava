@@ -1,4 +1,4 @@
-package modelo;
+package banco.modelo;
 import java.math.BigDecimal;
 
 public class CalculadorDeImposto {

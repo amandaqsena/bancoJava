@@ -1,9 +1,9 @@
-package app;
+package banco.app;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import modelo.contas.*;
+import banco.modelo.contas.*;
 public class AppServico {
 
     public static void main(String[] args){

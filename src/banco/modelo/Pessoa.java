@@ -1,4 +1,4 @@
-package modelo;
+package banco.modelo;
 
 public abstract class Pessoa {
     private String nome;
