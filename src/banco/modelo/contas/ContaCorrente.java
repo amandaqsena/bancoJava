@@ -15,6 +15,10 @@ public class ContaCorrente extends Conta implements Tributavel, ContaSacavel {
         return this.getSaldo();
     }
 
+    /**
+     * @param valor valor a ser sacado
+     * @return saldo após o saque
+     */
     public BigDecimal sacar(BigDecimal valor){
         removerSaldo(valor);
         return this.getSaldo();

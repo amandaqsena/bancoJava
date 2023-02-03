@@ -1,6 +1,11 @@
 package banco.modelo;
 import java.math.BigDecimal;
 
+/**
+ * Classe que registra tributáveis e calcula o impostosobre eles
+ *  @author amandasena97@gmail.com
+ *  @version 0.1
+ */
 public class CalculadorDeImposto {
     private BigDecimal totalImposto;
 

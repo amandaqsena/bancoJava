@@ -4,11 +4,17 @@ import java.math.BigDecimal;
 
 import banco.modelo.Cliente;
 
+/**
+ * Classe que representa a moldura de uma conta
+ * 
+ *  @author amandasena97@gmail.com
+ *  @version 0.1
+ */
 public abstract class Conta {
 
 
-    private int agencia;
-    private int numero;
+    private final int agencia;
+    private final int numero;
     private Cliente titular;
     public static int total = 0;
     protected BigDecimal saldo;
@@ -17,16 +23,9 @@ public abstract class Conta {
         return this.agencia;
     }
 
-    public void setAgencia(int agencia) {
-        this.agencia = agencia;
-    }
 
     public int getNumero() {
         return this.numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
     }
 
     public Cliente getTitular() {
@@ -37,7 +36,11 @@ public abstract class Conta {
         this.titular = titular;
     }
     
-    
+    /**
+     * Construtor para inicializar o objeto conta a partir da agência e número
+     * @param agencia
+     * @param numero
+     */
     public Conta(int agencia, int numero){
         if(agencia < 1) {
             throw new IllegalArgumentException("Agencia inválida");
@@ -73,6 +76,11 @@ public abstract class Conta {
         
     }
 
+    /**
+     * 
+     * @param valor
+     * @return saldo
+     */
     public BigDecimal adicionarSaldo(BigDecimal valor) {
         if((BigDecimal.ZERO.compareTo(valor) >= 0)){
             throw new IllegalArgumentException("Montante deve ser positivo");
@@ -80,4 +88,16 @@ public abstract class Conta {
         this.saldo = saldo.add(valor);
         return this.saldo;
     }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " agencia='" + getAgencia() + "'" +
+            ", numero='" + getNumero() + "'" +
+            ", titular='" + getTitular() + "'" +
+            ", saldo='" + getSaldo() + "'" +
+            "}";
+    }
+
 }

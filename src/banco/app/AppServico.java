@@ -3,7 +3,10 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-import banco.modelo.contas.*;
+import banco.modelo.contas.Conta;
+import banco.modelo.contas.ContaCorrente;
+import banco.modelo.contas.ContaDepositavel;
+
 public class AppServico {
 
     public static void main(String[] args){
