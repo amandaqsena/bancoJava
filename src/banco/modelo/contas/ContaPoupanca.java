@@ -77,4 +77,8 @@ public class ContaPoupanca extends Conta implements ContaSacavel, ContaDepositav
         return getSaldo();
     }
     
+    @Override
+    public String toString() {
+        return "Conta poupança: " + super.toString();
+    }
 }

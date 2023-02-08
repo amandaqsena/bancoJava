@@ -34,4 +34,9 @@ public class ContaCorrente extends Conta implements Tributavel, ContaSacavel {
         BigDecimal taxa = new BigDecimal("0.01");
         return super.saldo.multiply(taxa);
     }
+
+    @Override
+    public String toString() {
+        return "Conta corrente: " + super.toString();
+    }
 }

@@ -6,5 +6,10 @@ public class ContaInvestimento extends Conta{
         super(agencia, numero);
         //TODO Auto-generated constructor stub
     }
+
+    @Override
+    public String toString() {
+        return "Conta investimento: " + super.toString();
+    }
     
 }
