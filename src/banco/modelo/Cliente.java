@@ -1,6 +1,6 @@
 package banco.modelo;
 
-import java.util.List;
+import java.util.Set;
 
 import banco.modelo.contas.*;
 
@@ -11,6 +11,6 @@ import banco.modelo.contas.*;
  */
 public class Cliente extends Pessoa{
 
-    private List<Conta> conta;
+    private Set<Conta> conta;
     
 }
