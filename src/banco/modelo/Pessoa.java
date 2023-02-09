@@ -5,7 +5,7 @@ package banco.modelo;
  *  @author amandasena97@gmail.com
  *  @version 0.1
  */
-public abstract class Pessoa {
+public abstract class Pessoa implements Comparable<Pessoa> {
     private String nome;
     private String cpf;
     private String profissao;
@@ -27,5 +27,10 @@ public abstract class Pessoa {
     }
     public void setProfissao(String profissao) {
         this.profissao = profissao;
+    }
+
+    @Override
+    public int compareTo(Pessoa outra){
+        return this.getNome().compareTo(outra.getNome());
     }
 }

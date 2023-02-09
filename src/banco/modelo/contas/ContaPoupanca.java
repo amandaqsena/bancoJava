@@ -81,4 +81,10 @@ public class ContaPoupanca extends Conta implements ContaSacavel, ContaDepositav
     public String toString() {
         return "Conta poupança: " + super.toString();
     }
+
+    @Override
+    public int compareTo(Conta o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 }

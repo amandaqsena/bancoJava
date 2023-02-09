@@ -10,7 +10,7 @@ import banco.modelo.Cliente;
  *  @author amandasena97@gmail.com
  *  @version 0.1
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta>{
 
 
     private final int agencia;
@@ -114,4 +114,9 @@ public abstract class Conta {
         return true;
     }
 
+    @Override
+    public int compareTo(Conta o) {
+        
+        return this.saldo.compareTo(o.saldo);
+    }
 }

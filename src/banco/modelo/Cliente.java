@@ -12,5 +12,10 @@ import banco.modelo.contas.*;
 public class Cliente extends Pessoa{
 
     private Set<Conta> conta;
+
+    @Override
+    public int compareTo(Pessoa o) {
+        return super.compareTo(o);
+    }
     
 }

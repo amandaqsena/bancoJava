@@ -2,6 +2,7 @@ package banco.app;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -63,6 +64,14 @@ public class TesteComparator {
 
     for (Conta conta : lista) {
             System.out.println(conta + ", " + conta.getTitular().getNome());
+    }
+
+    Collections.sort(lista); // ou lista.sort(null);
+
+    System.out.println("---------");
+
+    for (Conta conta : lista) {
+            System.out.println(conta + ", " + conta.getSaldo());
     }
     }
     

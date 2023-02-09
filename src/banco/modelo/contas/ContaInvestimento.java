@@ -11,5 +11,11 @@ public class ContaInvestimento extends Conta{
     public String toString() {
         return "Conta investimento: " + super.toString();
     }
+
+    @Override
+    public int compareTo(Conta o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
     
 }

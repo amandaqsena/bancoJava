@@ -39,4 +39,10 @@ public class ContaCorrente extends Conta implements Tributavel, ContaSacavel {
     public String toString() {
         return "Conta corrente: " + super.toString();
     }
+
+    @Override
+    public int compareTo(Conta o) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 }
