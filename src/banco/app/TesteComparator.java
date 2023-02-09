@@ -49,8 +49,7 @@ public class TesteComparator {
             System.out.println(conta);
     }
 
-    NumeroDaContaComparator comparator = new NumeroDaContaComparator();
-    lista.sort(comparator);
+    lista.sort(new NumeroDaContaComparator());
 
     System.out.println("---------");
 
@@ -58,8 +57,7 @@ public class TesteComparator {
             System.out.println(conta + ", " + conta.getTitular().getNome());
     }
 
-    TitularDaContaComparator titularComparator = new TitularDaContaComparator();
-    lista.sort(titularComparator);
+    lista.sort(new TitularDaContaComparator());
 
     System.out.println("---------");
 
@@ -86,15 +84,6 @@ public class TesteComparator {
     
             @Override
             public int compare(Conta c1, Conta c2) {
-    
-                    if(c1.getNumero() < c2.getNumero()) {
-                        return -1;
-                    }
-    
-                    if(c1.getNumero() > c2.getNumero()) {
-                        return 1;
-                    }
-    
-                return 0;
+                return Integer.compare(c1.getNumero(), c2.getNumero());
             }
     }
